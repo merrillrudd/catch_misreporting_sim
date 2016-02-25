@@ -10,12 +10,13 @@ library(plyr)
 ###############################################
 # init_dir <- "C:\\Users\\mbrudd\\Dropbox\\UW\\Catch_unreporting"
 # admb_dir <- "D:\\Projects\\Catch_unreporting"
-init_dir <- "C:\\Users\\Merrill\\Dropbox\\UW\\Catch_unreporting"
-admb_dir <- "C:\\Projects\\Catch_unreporting"
+init_dir <- admb_dir <- "C:\\Git_Projects\\catch_misreporting_sim"
+# admb_dir <- "C:\\Projects\\Catch_unreporting"
 # init_dir <- admb_dir <- "F:\\Merrill\\Projects\\Catch_unreporting"
 # s_dir <- paste0(admb_dir, "\\Schaefer")
 pt_dir <- paste0(admb_dir, "\\Pella-Tomlinson Executable")
 res_figs <- file.path(init_dir, "figs")
+dir.create(res_figs, showWarnings=FALSE)
 
 ###############################################
 ### compile executables
@@ -54,8 +55,8 @@ msy_true <- (r_true*K_true*z_true)/((z_true+1)^(1/z_true + 1))
 bmey_true <- bmsy_true*1.3
 emsy_true <- msy_true/bmsy_true
 q_true <- 0.01
-sigma_proc <- 0.1
-sigma_obs <- 0.1
+sigma_proc <- 0.3
+sigma_obs <- 0.3
 
 # r_true2 <- 0.05
 # MSY_true2 <- (r_true2*K_true*z_true)/((z_true+1)^(1/z_true + 1))
@@ -69,8 +70,8 @@ OM1 <- runOM(bmodel="pt_startalt", z=z_true, K=K_true,
 	q=q_true, r=r_true, process_err=0, obs_err=0, datyrs=datyrs,
 	example_catch=catch1)
 OM2 <- runOM(bmodel="pt_startalt", z=z_true, K=K_true,
-	q=q_true, r=r_true, process_err=0.1,
-	obs_err=0.1, datyrs=datyrs, example_catch=catch1)
+	q=q_true, r=r_true, process_err=sigma_proc,
+	obs_err=sigma_proc, datyrs=datyrs, example_catch=catch1)
 index_test <- OM2$Index
 catch_test <- OM2$Catch
 B_true_test <- OM2$Biomass
@@ -159,7 +160,7 @@ dev.off()
 ###############################################
 ### models to run
 ###############################################
-sigma_vec <- c(0.001, 0.1)   #  
+sigma_vec <- c(0.001, 0.1, 0.3)   #  
 rmodel_vec <- c("allrep", "allunder", "allover", "repinc",   "repdec", "repinc_v2", "repdec_v2") #c("inc_mean1", "dec_mean1")       
 rmodel_vec_names <- c("100% Reporting", "Constant Under-reporting",  "Constant Over-reporting", "Increasing Reporting", "Decreasing Reporting") 
 # rmodel_vec_names <- c("Increasing Reporting\nMean=1", "Decreasing Reporting\nMean=1")#

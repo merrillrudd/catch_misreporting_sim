@@ -8,9 +8,9 @@ library(plyr)
 ###############################################
 ### directories
 ###############################################
-# init_dir <- "C:\\Users\\mbrudd\\Dropbox\\UW\\Catch_unreporting"
-# admb_dir <- "D:\\Projects\\Catch_unreporting"
-init_dir <- admb_dir <- "C:\\Git_Projects\\catch_misreporting_sim"
+ init_dir <- "D:\\Projects\\Catch_unreporting\\catch_misreporting_sim-master"
+ admb_dir <- "D:\\Projects\\Catch_unreporting"
+# init_dir <- admb_dir <- "C:\\Git_Projects\\catch_misreporting_sim"
 # admb_dir <- "C:\\Projects\\Catch_unreporting"
 # init_dir <- admb_dir <- "F:\\Merrill\\Projects\\Catch_unreporting"
 # s_dir <- paste0(admb_dir, "\\Schaefer")
@@ -160,7 +160,7 @@ dev.off()
 ###############################################
 ### models to run
 ###############################################
-sigma_vec <- c(0.001, 0.1, 0.3)   #  
+sigma_vec <- c(0.3)   #  
 rmodel_vec <- c("allrep", "allunder", "allover", "repinc",   "repdec", "repinc_v2", "repdec_v2") #c("inc_mean1", "dec_mean1")       
 rmodel_vec_names <- c("100% Reporting", "Constant Under-reporting",  "Constant Over-reporting", "Increasing Reporting", "Decreasing Reporting") 
 # rmodel_vec_names <- c("Increasing Reporting\nMean=1", "Decreasing Reporting\nMean=1")#
@@ -172,6 +172,8 @@ catch_vec <- c("2way_catch") #"1way_catch"
 ### directories to extract results
 ###############################################
 modcombos <- expand.grid(bmodel_vec_names, catch_vec, as.character(sigma_vec), rmodel_vec, stringsAsFactors=FALSE)
+
+### can re-set all dirs to re-write terminal results with directories we'll want to plot
 alldirs <- apply(modcombos, 1, function(x) paste0(admb_dir,"\\",
    as.character(x[1]), "\\", x[2], "\\sigma", x[3], "\\", x[4]))
 

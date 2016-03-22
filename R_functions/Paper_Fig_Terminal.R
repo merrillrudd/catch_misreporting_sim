@@ -113,7 +113,7 @@ if(show_params==FALSE){
         if(pres==FALSE) mtext("100% Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Truth", side=3, line=1.5, cex=2.5)
         mtext("Reporting\n  Rate",  side=2, line=4, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="a", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(a)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -121,7 +121,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=rep(0.5, datyrs), col=cols[1], lwd=4)
         if(pres==FALSE) mtext("Constant Under-reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Constant Under",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="b", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(b)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
 		plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -130,7 +130,7 @@ if(show_params==FALSE){
         if(pres==FALSE) mtext("Constant Over-reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Constant Over",  side=3, line=1.5, cex=2.5)
         if(show_catch==FALSE)    mtext("Year",  side=1, line=3, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="c", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(c)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         up <- (0.9-0.4)/(datyrs-1)*xplot + 0.4
@@ -139,7 +139,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=up, col=cols[3], lwd=4)
         if(pres==FALSE) mtext("Increasing Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Increasing",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="d", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(d)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -148,7 +148,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=down, col=cols[4], lwd=4)
         if(pres==FALSE) mtext("Decreasing Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Decreasing",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="e", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(e)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
 
 
 
@@ -160,28 +160,28 @@ if(show_catch==TRUE){
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     axis(2, at=pretty(c(1,catch1*1.6)), las=2, cex.axis=2)
     mtext("Catch",  side=2, line=4, cex=1.6)
-    if(print_letter==TRUE) print.letter(label="f", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="(f)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, ylim=c(0, max(catch1)*1.6), 
       xaxs="i", yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*0.5, lwd=4, col=cols[1])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="g", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="(g)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*1.5, lwd=4, col=cols[2])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     mtext("Year",  side=1, line=3, cex=1.6)
-    if(print_letter==TRUE) print.letter(label="h", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="(h)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*up, lwd=4, col=cols[3])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="i", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="(i)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*down, lwd=4, col=cols[4])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="j", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="(j)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
 }
 
 if(show_params==TRUE){
@@ -234,7 +234,7 @@ if(show_params==TRUE){
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
         if(relerr==1) mtext("Relative Error",  side=2, line=4, cex=1.6) 
         if(relerr==2) mtext("Estimated / True",  side=2, line=4, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="k", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(k)", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
@@ -270,7 +270,7 @@ if(show_params==TRUE){
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="l", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(l)", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
@@ -306,7 +306,7 @@ if(show_params==TRUE){
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="m", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(m)", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
@@ -341,7 +341,7 @@ if(show_params==TRUE){
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="n", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(n)", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
@@ -376,7 +376,7 @@ if(show_params==TRUE){
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="o", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="(o)", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
     mtext("Parameter",  side=1, line=9, cex=1.6, outer=TRUE)
     }

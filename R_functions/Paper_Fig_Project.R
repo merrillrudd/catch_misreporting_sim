@@ -123,7 +123,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
             lines(x=35:(35+nproject), y=c(c_rep[1,index[i],35], TAC[index[i],]), lwd=5, col=plotcol)
             lines(x=1:35, y=c_true[1,index[i],], lwd=2, col=gray(0.2))
             lines(x=35:(35+nproject), y=c(c_true[1,index[i],35], c_proj_t[index[i],]), col=gray(0.2), lwd=2)
-            if(print_letters==TRUE) print.letter(label=LETTERS[i], xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+            if(print_letters==TRUE) print.letter(label=paste0("(", letters[i],")"), xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
             if(i==3){
                 text(x=41, y=140, "Estimated", col=plotcol, font=2, cex=2)
                 text(x=39, y=39, "True", col=gray(0.2), font=2, cex=2)
@@ -149,7 +149,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
             lines(x=35:(35+nproject), y=c(b_est[1,index[i],35], b_proj[index[i],]), lwd=5, col=plotcol) 
     		lines(x=1:35, y=b_true[1,index[i],], lwd=2, col=gray(0.2))
     	    lines(x=35:(35+nproject), y=c(b_true[1,index[i],35], b_proj_t[index[i],]), lwd=2, col=gray(0.2))
-            if(print_letters==TRUE) print.letter(label=LETTERS[i+5], xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+            if(print_letters==TRUE) print.letter(label=paste0("(", letters[i+5],")"), xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
         }    
 
         for(i in 1:length(index)){
@@ -170,7 +170,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
             lines(x=35:(35+nproject), y=c(b_est[1,index[i],35]/bmsy_est[1,index[i]], b_proj[index[i],]/bmsy_est[1,index[i]]), lwd=5, col=plotcol)   
             lines(x=1:35, y=b_true[1,index[i],]/bmsy_true, lwd=2, col=gray(0.2))
     	    lines(x=35:(35+nproject), y=c(b_true[1,index[i],35]/bmsy_true, b_proj_t[index[i],]/bmsy_true), lwd=2, col=gray(0.2))
-            if(print_letters==TRUE) print.letter(label=LETTERS[i+10], xy=c(0.05,0.92), cex=2, font=2, col="black", xpd=NA)
+            if(print_letters==TRUE) print.letter(label=paste0("(", letters[i+10], ")"), xy=c(0.05,0.92), cex=2, font=2, col="black", xpd=NA)
         }   
 
         for(i in 1:length(index)){
@@ -192,7 +192,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
             lines(x=35:(35+nproject), y=c((c_rep[1,index[i],35]/b_est[1,index[i],35])/(msy_est[1,index[i]]/bmsy_est[1,index[i]]), (TAC[index[i],]/b_proj[index[i],])/(msy_est[1,index[i]]/bmsy_est[1,index[i]])), lwd=5, col=plotcol)
             lines(x=1:35, y=((c_true[1,index[i],]/b_true[1,index[i],])/(msy_true/bmsy_true)), lwd=2, col=gray(0.2))
         	lines(x=35:(35+nproject), y=c((c_true[1,index[i],35]/b_true[1,index[i],35])/(msy_true/bmsy_true), (c_proj_t[index[i],]/b_proj_t[index[i],])/(msy_true/bmsy_true)), col=gray(0.2), lwd=2)
-            if(print_letters==TRUE) print.letter(label=LETTERS[i+15], xy=c(0.05,0.92), cex=2, font=2, col="black", xpd=NA)
+            if(print_letters==TRUE) print.letter(label=paste0("(", letters[i+15], ")"), xy=c(0.05,0.92), cex=2, font=2, col="black", xpd=NA)
         }
 
     mtext("Year",  side=1, line=3, cex=1.6, outer=TRUE)

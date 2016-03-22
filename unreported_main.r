@@ -8,9 +8,9 @@ library(plyr)
 ###############################################
 ### directories
 ###############################################
- init_dir <- "D:\\Projects\\Catch_unreporting\\catch_misreporting_sim-master"
- admb_dir <- "D:\\Projects\\Catch_unreporting"
-# init_dir <- admb_dir <- "C:\\Git_Projects\\catch_misreporting_sim"
+ # init_dir <- "D:\\Projects\\Catch_unreporting\\catch_misreporting_sim-master"
+ # admb_dir <- "D:\\Projects\\Catch_unreporting"
+init_dir <- admb_dir <- "C:\\Git_Projects\\catch_misreporting_sim"
 # admb_dir <- "C:\\Projects\\Catch_unreporting"
 # init_dir <- admb_dir <- "F:\\Merrill\\Projects\\Catch_unreporting"
 # s_dir <- paste0(admb_dir, "\\Schaefer")

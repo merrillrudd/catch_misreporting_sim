@@ -257,13 +257,13 @@ if(show_params==TRUE){
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[2]], y1=e_re[1,index_det[2]], lwd=6)
         }
         if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[2]], y1=b_re[1,index_det[2]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[2]], y1=msy_re[1,index_det[2]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[2]], y1=e_re[1,index_det[2]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[2]], y1=K_re[1,index_det[2]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[2]], y1=r_re[1,index_det[2]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[2]], y1=bbmsy_re[1,index_det[2]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[2]], y1=eemsy_re[1,index_det[2]], lwd=6)
         }
 
         if(relerr==1) abline(h=0, lwd=1, lty=2)
@@ -293,13 +293,13 @@ if(show_params==TRUE){
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[3]], y1=e_re[1,index_det[3]], lwd=6)
         }
         if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[3]], y1=b_re[1,index_det[3]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[3]], y1=msy_re[1,index_det[3]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[3]], y1=e_re[1,index_det[3]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[3]], y1=K_re[1,index_det[3]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[3]], y1=r_re[1,index_det[3]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[3]], y1=bbmsy_re[1,index_det[3]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[3]], y1=eemsy_re[1,index_det[3]], lwd=6)
         }
 
         if(relerr==1) abline(h=0, lwd=1, lty=2)
@@ -328,13 +328,13 @@ if(show_params==TRUE){
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[4]], y1=e_re[1,index_det[4]], lwd=6)
         }
         if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[4]], y1=b_re[1,index_det[4]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[4]], y1=msy_re[1,index_det[4]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[4]], y1=e_re[1,index_det[4]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[4]], y1=K_re[1,index_det[4]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[4]], y1=r_re[1,index_det[4]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[4]], y1=bbmsy_re[1,index_det[4]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[4]], y1=eemsy_re[1,index_det[4]], lwd=6)
         }
         
         if(relerr==1) abline(h=0, lwd=1, lty=2)
@@ -363,13 +363,13 @@ if(show_params==TRUE){
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[5]], y1=e_re[1,index_det[5]], lwd=6)
         }
         if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[5]], y1=b_re[1,index_det[5]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[5]], y1=msy_re[1,index_det[5]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[5]], y1=e_re[1,index_det[5]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[5]], y1=K_re[1,index_det[5]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[5]], y1=r_re[1,index_det[5]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[5]], y1=bbmsy_re[1,index_det[5]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[5]], y1=eemsy_re[1,index_det[5]], lwd=6)
         }
       
         if(relerr==1) abline(h=0, lwd=1, lty=2)

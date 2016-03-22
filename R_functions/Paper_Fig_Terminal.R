@@ -113,7 +113,7 @@ if(show_params==FALSE){
         if(pres==FALSE) mtext("100% Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Truth", side=3, line=1.5, cex=2.5)
         mtext("Reporting\n  Rate",  side=2, line=4, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="A", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="a", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -121,7 +121,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=rep(0.5, datyrs), col=cols[1], lwd=4)
         if(pres==FALSE) mtext("Constant Under-reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Constant Under",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="B", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="b", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
 		plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -130,7 +130,7 @@ if(show_params==FALSE){
         if(pres==FALSE) mtext("Constant Over-reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Constant Over",  side=3, line=1.5, cex=2.5)
         if(show_catch==FALSE)    mtext("Year",  side=1, line=3, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="C", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="c", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         up <- (0.9-0.4)/(datyrs-1)*xplot + 0.4
@@ -139,7 +139,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=up, col=cols[3], lwd=4)
         if(pres==FALSE) mtext("Increasing Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Increasing",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="D", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="d", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         abline(h=1, col=gray(0.6), lwd=2)
@@ -148,7 +148,7 @@ if(show_params==FALSE){
         lines(x=xplot, y=down, col=cols[4], lwd=4)
         if(pres==FALSE) mtext("Decreasing Reporting",  side=3, line=1.5, cex=1.6)
         if(pres==TRUE) mtext("Decreasing",  side=3, line=1.5, cex=2.5)
-        if(print_letter==TRUE) print.letter(label="E", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="e", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
 
 
 
@@ -160,28 +160,28 @@ if(show_catch==TRUE){
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     axis(2, at=pretty(c(1,catch1*1.6)), las=2, cex.axis=2)
     mtext("Catch",  side=2, line=4, cex=1.6)
-    if(print_letter==TRUE) print.letter(label="F", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="f", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, ylim=c(0, max(catch1)*1.6), 
       xaxs="i", yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*0.5, lwd=4, col=cols[1])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="G", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="g", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*1.5, lwd=4, col=cols[2])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     mtext("Year",  side=1, line=3, cex=1.6)
-    if(print_letter==TRUE) print.letter(label="H", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="h", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*up, lwd=4, col=cols[3])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="I", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="i", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
       yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
     lines(x=xplot, y=catch1*down, lwd=4, col=cols[4])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
-    if(print_letter==TRUE) print.letter(label="J", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
+    if(print_letter==TRUE) print.letter(label="j", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
 }
 
 if(show_params==TRUE){
@@ -200,7 +200,7 @@ if(show_params==TRUE){
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allrep") + index_add
-        if(pres==FALSE) beanplot(msy_re[,index[1]], K_re[,index[1]], r_re[,index[1]], b_re[,index[1]], emsy_re[,index[1]], bbmsy_re[,index[1]], eemsy_re[,index[1]], 
+        if(pres==FALSE) beanplot(b_re[,index[1]], msy_re[,index[1]], e_re[,index[1]], K_re[,index[1]], r_re[,index[1]], bbmsy_re[,index[1]], eemsy_re[,index[1]], 
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(gray(0.2),medcol ,NA, medcol), overalline="median", beanlines="quantiles",
@@ -210,24 +210,37 @@ if(show_params==TRUE){
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(gray(0.2),medcol ,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        if(pres==TRUE){
         segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
         segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
         segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        }
+        if(pres==FALSE){
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        }
+
+
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(2, at=pretty(ylim), las=2, cex.axis=2)
-        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("r")), expression(italic("B")), expression(italic(u[{MSY}])), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
+        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
         if(relerr==1) mtext("Relative Error",  side=2, line=4, cex=1.6) 
         if(relerr==2) mtext("Estimated / True",  side=2, line=4, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="K", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="k", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allunder") + index_add
-        if(pres==FALSE) beanplot(msy_re[,index[2]], K_re[,index[2]], r_re[,index[2]], b_re[,index[2]], emsy_re[,index[2]], bbmsy_re[,index[2]], eemsy_re[,index[2]], 
+        if(pres==FALSE) beanplot(b_re[,index[2]], msy_re[,index[2]], e_re[,index[2]], K_re[,index[2]], r_re[,index[2]], bbmsy_re[,index[2]], eemsy_re[,index[2]], 
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[1],medcol,NA, medcol), overalline="median", beanlines="quantiles",
@@ -237,21 +250,33 @@ if(show_params==TRUE){
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[1],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        if(pres==TRUE){
         segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[2]], y1=msy_re[1,index_det[2]], lwd=6)
         segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[2]], y1=K_re[1,index_det[2]], lwd=6)
         segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[2]], y1=b_re[1,index_det[2]], lwd=6)
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[2]], y1=e_re[1,index_det[2]], lwd=6)
+        }
+        if(pres==FALSE){
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        }
+
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("r")), expression(italic("B")), expression(italic(u[{MSY}])), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
+        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="L", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="l", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allover") + index_add
-        if(pres==FALSE) beanplot(msy_re[,index[3]], K_re[,index[3]], r_re[,index[3]], b_re[,index[3]], emsy_re[,index[3]], bbmsy_re[,index[3]], eemsy_re[,index[3]], 
+        if(pres==FALSE) beanplot(b_re[,index[3]], msy_re[,index[3]], e_re[,index[3]], K_re[,index[3]], r_re[,index[3]], bbmsy_re[,index[3]], eemsy_re[,index[3]], 
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[2],medcol,NA, medcol), overalline="median", beanlines="quantiles",
@@ -261,20 +286,32 @@ if(show_params==TRUE){
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[2],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        if(pres==TRUE){
         segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[3]], y1=msy_re[1,index_det[3]], lwd=6)
         segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[3]], y1=K_re[1,index_det[3]], lwd=6)
         segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[3]], y1=b_re[1,index_det[3]], lwd=6)
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[3]], y1=e_re[1,index_det[3]], lwd=6)
+        }
+        if(pres==FALSE){
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        }
+
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("r")), expression(italic("B")), expression(italic(u[{MSY}])), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
+        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="M", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="m", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="repinc") + index_add
-        if(pres==FALSE) beanplot(msy_re[,index[4]], K_re[,index[4]], r_re[,index[4]], b_re[,index[4]], emsy_re[,index[4]], bbmsy_re[,index[4]], eemsy_re[,index[4]], 
+        if(pres==FALSE) beanplot(b_re[,index[4]], msy_re[,index[4]], e_re[,index[4]], K_re[,index[4]], r_re[,index[4]], bbmsy_re[,index[4]], eemsy_re[,index[4]], 
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[3],medcol,NA, medcol), overalline="median", beanlines="quantiles",
@@ -284,20 +321,32 @@ if(show_params==TRUE){
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[3],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        if(pres==TRUE){
         segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[4]], y1=msy_re[1,index_det[4]], lwd=6)
         segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[4]], y1=K_re[1,index_det[4]], lwd=6)
         segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[4]], y1=b_re[1,index_det[4]], lwd=6)
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[4]], y1=e_re[1,index_det[4]], lwd=6)
+        }
+        if(pres==FALSE){
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        }
+        
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("r")), expression(italic("B")), expression(italic(u[{MSY}])), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
+        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="N", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="n", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
        # index <- which(rmodel_vec=="repdec") + index_add
-        if(pres==FALSE) beanplot(msy_re[,index[5]], K_re[,index[5]], r_re[,index[5]], b_re[,index[5]], emsy_re[,index[5]], bbmsy_re[,index[5]], eemsy_re[,index[5]], 
+        if(pres==FALSE) beanplot(b_re[,index[5]], msy_re[,index[5]], e_re[,index[5]], K_re[,index[5]], r_re[,index[5]], bbmsy_re[,index[5]], eemsy_re[,index[5]], 
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[4],medcol,NA, medcol), overalline="median", beanlines="quantiles",
@@ -307,15 +356,27 @@ if(show_params==TRUE){
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[4],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        if(pres==TRUE){
         segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[5]], y1=msy_re[1,index_det[5]], lwd=6)
         segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[5]], y1=K_re[1,index_det[5]], lwd=6)
         segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[5]], y1=b_re[1,index_det[5]], lwd=6)
         segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[5]], y1=e_re[1,index_det[5]], lwd=6)
+        }
+        if(pres==FALSE){
+        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
+        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
+        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
+        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
+        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
+        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
+        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
+        }
+      
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("r")), expression(italic("B")), expression(italic(u[{MSY}])), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
+        if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
         if(pres==TRUE) axis(1, at=1:4, labels=c(expression(italic("MSY")), expression(italic("K")), expression(italic("B")), expression(italic("u"))), cex.axis=3)
-        if(print_letter==TRUE) print.letter(label="O", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="o", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
     mtext("Parameter",  side=1, line=9, cex=1.6, outer=TRUE)
     }
@@ -335,7 +396,7 @@ if(show_params==TRUE){
         axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("u")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}])), expression(italic("MSY")), expression(italic("K")), expression(italic("r"))), las=2, cex.axis=2)
         if(relerr==1) mtext("Relative Error",  side=2, line=4, cex=1.6) 
         if(relerr==2) mtext("Estimated / True",  side=2, line=4, cex=1.6)
-        if(print_letter==TRUE) print.letter(label="K", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="k", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
@@ -345,7 +406,7 @@ if(show_params==TRUE){
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("u")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}])), expression(italic("MSY")), expression(italic("K")), expression(italic("r"))), las=2, cex.axis=2)
-        if(print_letter==TRUE) print.letter(label="L", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="l", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
@@ -356,7 +417,7 @@ if(show_params==TRUE){
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("u")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}])), expression(italic("MSY")), expression(italic("K")), expression(italic("r"))), las=2, cex.axis=2)
-        if(print_letter==TRUE) print.letter(label="M", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="m", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
@@ -366,7 +427,7 @@ if(show_params==TRUE){
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("u")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}])), expression(italic("MSY")), expression(italic("K")), expression(italic("r"))), las=2, cex.axis=2)
-        if(print_letter==TRUE) print.letter(label="N", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="n", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
@@ -376,7 +437,7 @@ if(show_params==TRUE){
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("u")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}])), expression(italic("MSY")), expression(italic("K")), expression(italic("r"))), las=2, cex.axis=2)
-        if(print_letter==TRUE) print.letter(label="O", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
+        if(print_letter==TRUE) print.letter(label="o", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
         mtext("Parameter",  side=1, line=9, cex=1.6, outer=TRUE)
     }
   }

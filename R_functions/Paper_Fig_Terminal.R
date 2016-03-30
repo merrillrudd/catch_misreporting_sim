@@ -201,30 +201,30 @@ if(show_params==TRUE){
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allrep") + index_add
         if(pres==FALSE) beanplot(b_re[,index[1]], msy_re[,index[1]], e_re[,index[1]], K_re[,index[1]], r_re[,index[1]], bbmsy_re[,index[1]], eemsy_re[,index[1]], 
-            what=c(0,1,0,0),
-            cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
-            ylim=ylim, log="", col=c(gray(0.2),medcol ,NA, medcol), overalline="median", beanlines="quantiles",
+            what=c(0,1,1,0),
+            cex=0.5, beanlinewd=5, maxstripline=0.5, maxwidth=0.75, 
+            ylim=ylim, log="", col=c(gray(0.2),medcol ,NA, medcol), overalline="median", beanlines="median",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(pres==TRUE) beanplot(msy_re[,index[1]], K_re[,index[1]], b_re[,index[1]], e_re[,index[1]],
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(gray(0.2),medcol ,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
-        if(pres==TRUE){
-        segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        }
-        if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[1]], y1=b_re[1,index_det[1]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[1]], y1=msy_re[1,index_det[1]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[1]], y1=e_re[1,index_det[1]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[1]], y1=K_re[1,index_det[1]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[1]], y1=r_re[1,index_det[1]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[1]], y1=bbmsy_re[1,index_det[1]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[1]], y1=eemsy_re[1,index_det[1]], lwd=6)
-        }
+        # if(pres==TRUE){
+        # segments(x0=0.6, x1=1.4, y0=median(msy_re[,index[1]]), y1=median(msy_re[,index[1]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(K_re[,index[1]]), y1=median(K_re[,index[1]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(b_re[,index[1]]), y1=median(b_re[,index[1]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(e_re[,index[1]]), y1=median(e_re[,index[1]]), lwd=6)
+        # }
+        # if(pres==FALSE){
+        # segments(x0=0.6, x1=1.4, y0=median(b_re[,index[1]]), y1=median(b_re[,index[1]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(msy_re[,index[1]]), y1=median(msy_re[,index[1]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(e_re[,index[1]]), y1=median(e_re[,index[1]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(K_re[,index[1]]), y1=median(K_re[,index[1]]), lwd=6)
+        # segments(x0=4.6, x1=5.4, y0=median(r_re[,index[1]]), y1=median(r_re[,index[1]]), lwd=6)
+        # segments(x0=5.6, x1=6.4, y0=median(bbmsy_re[,index[1]]), y1=median(bbmsy_re[,index[1]]), lwd=6)
+        # segments(x0=6.6, x1=7.4, y0=median(eemsy_re[,index[1]]), y1=median(eemsy_re[,index[1]]), lwd=6)
+        # }
 
 
         if(relerr==1) abline(h=0, lwd=1, lty=2)
@@ -241,31 +241,30 @@ if(show_params==TRUE){
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allunder") + index_add
         if(pres==FALSE) beanplot(b_re[,index[2]], msy_re[,index[2]], e_re[,index[2]], K_re[,index[2]], r_re[,index[2]], bbmsy_re[,index[2]], eemsy_re[,index[2]], 
-            what=c(0,1,0,0),
-            cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
-            ylim=ylim, log="", col=c(cols[1],medcol,NA, medcol), overalline="median", beanlines="quantiles",
+            what=c(0,1,1,0),
+            cex=0.5, beanlinewd=5, maxstripline=0.5, maxwidth=0.75, 
+            ylim=ylim, log="", col=c(cols[1],medcol,NA, medcol), overalline="median", beanlines="median",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(pres==TRUE) beanplot(msy_re[,index[2]], K_re[,index[2]], b_re[,index[2]], e_re[,index[2]],
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[1],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
-        if(pres==TRUE){
-        segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[2]], y1=msy_re[1,index_det[2]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[2]], y1=K_re[1,index_det[2]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[2]], y1=b_re[1,index_det[2]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[2]], y1=e_re[1,index_det[2]], lwd=6)
-        }
-        if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[2]], y1=b_re[1,index_det[2]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[2]], y1=msy_re[1,index_det[2]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[2]], y1=e_re[1,index_det[2]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[2]], y1=K_re[1,index_det[2]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[2]], y1=r_re[1,index_det[2]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[2]], y1=bbmsy_re[1,index_det[2]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[2]], y1=eemsy_re[1,index_det[2]], lwd=6)
-        }
-
+        # if(pres==TRUE){
+        # segments(x0=0.6, x1=1.4, y0=median(msy_re[,index[2]]), y1=median(msy_re[,index[2]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(K_re[,index[2]]), y1=median(K_re[,index[2]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(b_re[,index[2]]), y1=median(b_re[,index[2]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(e_re[,index[2]]), y1=median(e_re[,index[2]]), lwd=6)
+        # }
+        # if(pres==FALSE){
+        # segments(x0=0.6, x1=1.4, y0=median(b_re[,index[2]]), y1=median(b_re[,index[2]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(msy_re[,index[2]]), y1=median(msy_re[,index[2]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(e_re[,index[2]]), y1=median(e_re[,index[2]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(K_re[,index[2]]), y1=median(K_re[,index[2]]), lwd=6)
+        # segments(x0=4.6, x1=5.4, y0=median(r_re[,index[2]]), y1=median(r_re[,index[2]]), lwd=6)
+        # segments(x0=5.6, x1=6.4, y0=median(bbmsy_re[,index[2]]), y1=median(bbmsy_re[,index[2]]), lwd=6)
+        # segments(x0=6.6, x1=7.4, y0=median(eemsy_re[,index[2]]), y1=median(eemsy_re[,index[2]]), lwd=6)
+        # }
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)
@@ -277,30 +276,30 @@ if(show_params==TRUE){
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allover") + index_add
         if(pres==FALSE) beanplot(b_re[,index[3]], msy_re[,index[3]], e_re[,index[3]], K_re[,index[3]], r_re[,index[3]], bbmsy_re[,index[3]], eemsy_re[,index[3]], 
-            what=c(0,1,0,0),
-            cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
-            ylim=ylim, log="", col=c(cols[2],medcol,NA, medcol), overalline="median", beanlines="quantiles",
+            what=c(0,1,1,0),
+            cex=0.5, beanlinewd=5, maxstripline=0.5, maxwidth=0.75, 
+            ylim=ylim, log="", col=c(cols[2],medcol,NA, medcol), overalline="median", beanlines="median",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(pres==TRUE) beanplot(msy_re[,index[3]], K_re[,index[3]], b_re[,index[3]], e_re[,index[3]],
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[2],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
-        if(pres==TRUE){
-        segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[3]], y1=msy_re[1,index_det[3]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[3]], y1=K_re[1,index_det[3]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[3]], y1=b_re[1,index_det[3]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[3]], y1=e_re[1,index_det[3]], lwd=6)
-        }
-        if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[3]], y1=b_re[1,index_det[3]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[3]], y1=msy_re[1,index_det[3]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[3]], y1=e_re[1,index_det[3]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[3]], y1=K_re[1,index_det[3]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[3]], y1=r_re[1,index_det[3]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[3]], y1=bbmsy_re[1,index_det[3]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[3]], y1=eemsy_re[1,index_det[3]], lwd=6)
-        }
+        # if(pres==TRUE){
+        # segments(x0=0.6, x1=1.4, y0=median(msy_re[,index[3]]), y1=median(msy_re[,index[3]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(K_re[,index[3]]), y1=median(K_re[,index[3]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(b_re[,index[3]]), y1=median(b_re[,index[3]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(e_re[,index[3]]), y1=median(e_re[,index[3]]), lwd=6)
+        # }
+        # if(pres==FALSE){
+        # segments(x0=0.6, x1=1.4, y0=median(b_re[,index[3]]), y1=median(b_re[,index[3]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(msy_re[,index[3]]), y1=median(msy_re[,index[3]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(e_re[,index[3]]), y1=median(e_re[,index[3]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(K_re[,index[3]]), y1=median(K_re[,index[3]]), lwd=6)
+        # segments(x0=4.6, x1=5.4, y0=median(r_re[,index[3]]), y1=median(r_re[,index[3]]), lwd=6)
+        # segments(x0=5.6, x1=6.4, y0=median(bbmsy_re[,index[3]]), y1=median(bbmsy_re[,index[3]]), lwd=6)
+        # segments(x0=6.6, x1=7.4, y0=median(eemsy_re[,index[3]]), y1=median(eemsy_re[,index[3]]), lwd=6)
+        # }
 
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
@@ -312,30 +311,30 @@ if(show_params==TRUE){
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="repinc") + index_add
         if(pres==FALSE) beanplot(b_re[,index[4]], msy_re[,index[4]], e_re[,index[4]], K_re[,index[4]], r_re[,index[4]], bbmsy_re[,index[4]], eemsy_re[,index[4]], 
-            what=c(0,1,0,0),
-            cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
-            ylim=ylim, log="", col=c(cols[3],medcol,NA, medcol), overalline="median", beanlines="quantiles",
+            what=c(0,1,1,0),
+            cex=0.5, beanlinewd=5, maxstripline=0.5, maxwidth=0.75, 
+            ylim=ylim, log="", col=c(cols[3],medcol,NA, medcol), overalline="median", beanlines="median",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(pres==TRUE) beanplot(msy_re[,index[4]], K_re[,index[4]], b_re[,index[4]], e_re[,index[4]],
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[3],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
-        if(pres==TRUE){
-        segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[4]], y1=msy_re[1,index_det[4]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[4]], y1=K_re[1,index_det[4]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[4]], y1=b_re[1,index_det[4]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[4]], y1=e_re[1,index_det[4]], lwd=6)
-        }
-        if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[4]], y1=b_re[1,index_det[4]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[4]], y1=msy_re[1,index_det[4]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[4]], y1=e_re[1,index_det[4]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[4]], y1=K_re[1,index_det[4]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[4]], y1=r_re[1,index_det[4]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[4]], y1=bbmsy_re[1,index_det[4]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[4]], y1=eemsy_re[1,index_det[4]], lwd=6)
-        }
+        # if(pres==TRUE){
+        # segments(x0=0.6, x1=1.4, y0=median(msy_re[,index[4]]), y1=median(msy_re[,index[4]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(K_re[,index[4]]), y1=median(K_re[,index[4]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(b_re[,index[4]]), y1=median(b_re[,index[4]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(e_re[,index[4]]), y1=median(e_re[,index[4]]), lwd=6)
+        # }
+        # if(pres==FALSE){
+        # segments(x0=0.6, x1=1.4, y0=median(b_re[,index[4]]), y1=median(b_re[,index[4]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(msy_re[,index[4]]), y1=median(msy_re[,index[4]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(e_re[,index[4]]), y1=median(e_re[,index[4]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(K_re[,index[4]]), y1=median(K_re[,index[4]]), lwd=6)
+        # segments(x0=4.6, x1=5.4, y0=median(r_re[,index[4]]), y1=median(r_re[,index[4]]), lwd=6)
+        # segments(x0=5.6, x1=6.4, y0=median(bbmsy_re[,index[4]]), y1=median(bbmsy_re[,index[4]]), lwd=6)
+        # segments(x0=6.6, x1=7.4, y0=median(eemsy_re[,index[4]]), y1=median(eemsy_re[,index[4]]), lwd=6)
+        # }
         
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
@@ -347,31 +346,30 @@ if(show_params==TRUE){
 			   # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
        # index <- which(rmodel_vec=="repdec") + index_add
         if(pres==FALSE) beanplot(b_re[,index[5]], msy_re[,index[5]], e_re[,index[5]], K_re[,index[5]], r_re[,index[5]], bbmsy_re[,index[5]], eemsy_re[,index[5]], 
-            what=c(0,1,0,0),
-            cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
-            ylim=ylim, log="", col=c(cols[4],medcol,NA, medcol), overalline="median", beanlines="quantiles",
+            what=c(0,1,1,0),
+            cex=0.5, beanlinewd=5, maxstripline=0.5, maxwidth=0.75, 
+            ylim=ylim, log="", col=c(cols[4],medcol,NA, medcol), overalline="median", beanlines="median",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(pres==TRUE) beanplot(msy_re[,index[5]], K_re[,index[5]], b_re[,index[5]], e_re[,index[5]],
             what=c(0,1,0,0),
             cex=0.5, beanlinewd=3, maxstripline=0.5, maxwidth=0.75, 
             ylim=ylim, log="", col=c(cols[4],medcol,NA, medcol), overalline="median", beanlines="quantiles",
             border=NA, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
-        if(pres==TRUE){
-        segments(x0=0.6, x1=1.4, y0=msy_re[1,index_det[5]], y1=msy_re[1,index_det[5]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=K_re[1,index_det[5]], y1=K_re[1,index_det[5]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=b_re[1,index_det[5]], y1=b_re[1,index_det[5]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=e_re[1,index_det[5]], y1=e_re[1,index_det[5]], lwd=6)
-        }
-        if(pres==FALSE){
-        segments(x0=0.6, x1=1.4, y0=b_re[1,index_det[5]], y1=b_re[1,index_det[5]], lwd=6)
-        segments(x0=1.6, x1=2.4, y0=msy_re[1,index_det[5]], y1=msy_re[1,index_det[5]], lwd=6)
-        segments(x0=2.6, x1=3.4, y0=e_re[1,index_det[5]], y1=e_re[1,index_det[5]], lwd=6)
-        segments(x0=3.6, x1=4.4, y0=K_re[1,index_det[5]], y1=K_re[1,index_det[5]], lwd=6)
-        segments(x0=4.6, x1=5.4, y0=r_re[1,index_det[5]], y1=r_re[1,index_det[5]], lwd=6)
-        segments(x0=5.6, x1=6.4, y0=bbmsy_re[1,index_det[5]], y1=bbmsy_re[1,index_det[5]], lwd=6)
-        segments(x0=6.6, x1=7.4, y0=eemsy_re[1,index_det[5]], y1=eemsy_re[1,index_det[5]], lwd=6)
-        }
-      
+        # if(pres==TRUE){
+        # segments(x0=0.6, x1=1.4, y0=median(msy_re[,index[5]]), y1=median(msy_re[,index[5]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(K_re[,index[5]]), y1=median(K_re[,index[5]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(b_re[,index[5]]), y1=median(b_re[,index[5]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(e_re[,index[5]]), y1=median(e_re[,index[5]]), lwd=6)
+        # }
+        # if(pres==FALSE){
+        # segments(x0=0.6, x1=1.4, y0=median(b_re[,index[5]]), y1=median(b_re[,index[5]]), lwd=6)
+        # segments(x0=1.6, x1=2.4, y0=median(msy_re[,index[5]]), y1=median(msy_re[,index[5]]), lwd=6)
+        # segments(x0=2.6, x1=3.4, y0=median(e_re[,index[5]]), y1=median(e_re[,index[5]]), lwd=6)
+        # segments(x0=3.6, x1=4.4, y0=median(K_re[,index[5]]), y1=median(K_re[,index[5]]), lwd=6)
+        # segments(x0=4.6, x1=5.4, y0=median(r_re[,index[5]]), y1=median(r_re[,index[5]]), lwd=6)
+        # segments(x0=5.6, x1=6.4, y0=median(bbmsy_re[,index[5]]), y1=median(bbmsy_re[,index[5]]), lwd=6)
+        # segments(x0=6.6, x1=7.4, y0=median(eemsy_re[,index[5]]), y1=median(eemsy_re[,index[5]]), lwd=6)
+        # }
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         if(pres==FALSE) axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)

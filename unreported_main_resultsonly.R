@@ -57,9 +57,12 @@ res_dir <- file.path(init_dir, "results")
 
 term_2way_startalt <- readRDS(file.path(res_dir, "2way-results-terminal-startalt.rds"))
 
-png(file.path(res_figs, "Paper_Fig_Terminal_stochastic_Alt.png"), width=1300, height=800)
+setwd(init_dir)
+source("r_functions\\functions.R")
+
+# png(file.path(res_figs, "Paper_Fig_Terminal_stochastic_Alt.png"), width=1300, height=800)
 Paper_Fig_Terminal(results=term_2way_startalt, deterministic=FALSE, relerr=2)
-dev.off()
+# dev.off()
 
 pdf(file.path(res_figs, "Rudd_and_Branch_Figure2.pdf"), width=18, height=14)
 Paper_Fig_Terminal(results=term_2way_startalt, deterministic=FALSE, relerr=2)

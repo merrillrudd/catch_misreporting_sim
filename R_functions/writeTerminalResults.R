@@ -53,12 +53,9 @@ writeTerminalResults <- function(iter, datyrs, dirs, res_dir){
     Outs$K_true <- Ktrue
     Outs$r_true <- rtrue
 
-    #if(any(grepl("1way_catch", dirs)) & any(grepl("2way_catch", dirs))) save_file <- "allresults-terminal.rds"
-    #if(any(grepl("1way_catch", dirs)) & any(grepl("2way_catch", dirs))==FALSE) save_file <- "1way-results-terminal.rds"
-    if(any(grepl("1way_catch", dirs))==FALSE & any(grepl("2way_catch", dirs))){
-      if(all(dirs==dirs2_startalt)) save_file <- "2way-results-terminal-startalt.rds"
-      if(all(dirs==dirs2_startK)) save_file <- "2way-results-terminal-startK.rds"
-    }
+    if(any(grepl("1way_catch", dirs)) & any(grepl("2way_catch", dirs))) save_file <- "allresults-terminal.rds"
+    if(any(grepl("1way_catch", dirs)) & any(grepl("2way_catch", dirs))==FALSE) save_file <- "1way-results-terminal.rds"
+    # save_file <- paste0(name, ".rds")
 
     saveRDS(Outs, file.path(res_dir, save_file))
     return(Outs)

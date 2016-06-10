@@ -62,12 +62,12 @@ OM2$F <- OM2$Catch/OM2$Biomass
 
 F_2way <- OM2$F
 
-r_vec <- c(0.05, 0.2, 0.7)
-K_vec <- c(1000)
 
 ###################
 ### setup models
 ###################
+r_vec <- c(0.05, 0.2, 0.7)
+K_vec <- c(1000)
 
 sigma_vec <- c(0.001, 0.3)
 rmodel_vec <- c("allrep", "allunder", "allover", "repinc",   "repdec" ) #c("inc_mean1", "dec_mean1")       

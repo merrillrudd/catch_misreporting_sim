@@ -11,8 +11,8 @@ Paper_Fig_Terminal <- function(results, deterministic=FALSE, relerr=1, show_catc
         index <- 1:5
     }
     if(deterministic==FALSE){
-       # index <- seq(2, 14, by=2)[-c(4,5)]
-       # index_det <- seq(1, 14, by=2)[-c(4,5)]
+       index <- seq(2, 10, by=2)
+       index_det <- seq(1, 10, by=2)
     }
 
 		b_est <- results$b_est ## iter by dir by year
@@ -387,11 +387,11 @@ if(show_params==TRUE){
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allrep") + index_add
-        plot(x=1:7, y=c(b_re[1,1], msy_re[1,1], emsy_re[1,1], K_re[1,1], r_re[1,1], bbmsy_re[1,1], eemsy_re[1,1]), ylim=ylim, xlim=c(0,8), col=gray(0.6), pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        plot(x=1:8, y=c(b_re[1,1], msy_re[1,1], e_re[1,1], emsy_re[1,1], K_re[1,1], r_re[1,1], bbmsy_re[1,1], eemsy_re[1,1]), ylim=ylim, xlim=c(0,8), col=gray(0.6), pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(2, at=pretty(ylim), las=2, cex.axis=2)
-        axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
+        axis(1, at=1:8, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
         if(relerr==1) mtext("Relative Error",  side=2, line=4, cex=1.6) 
         if(relerr==2) mtext("Estimated / True",  side=2, line=4, cex=1.6)
         if(print_letter==TRUE) print.letter(label="k", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
@@ -399,38 +399,38 @@ if(show_params==TRUE){
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allunder") + index_add
-        plot(x=1:7, y=c(b_re[1,2], msy_re[1,2], emsy_re[1,2], K_re[1,2], r_re[1,2], bbmsy_re[1,2], eemsy_re[1,2]), ylim=ylim, xlim=c(0,8), col=cols[1], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        plot(x=1:8, y=c(b_re[1,2], msy_re[1,2], e_re[1,2], emsy_re[1,2], K_re[1,2], r_re[1,2], bbmsy_re[1,2], eemsy_re[1,2]), ylim=ylim, xlim=c(0,8), col=cols[1], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
+        axis(1, at=1:8, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
         if(print_letter==TRUE) print.letter(label="l", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allover") + index_add
-        plot(x=1:7, y=c(b_re[1,3], msy_re[1,3], emsy_re[1,3], K_re[1,3], r_re[1,3], bbmsy_re[1,3], eemsy_re[1,3]), ylim=ylim, xlim=c(0,8), col=cols[2], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        plot(x=1:8, y=c(b_re[1,3], msy_re[1,3], e_re[1,3], emsy_re[1,3], K_re[1,3], r_re[1,3], bbmsy_re[1,3], eemsy_re[1,3]), ylim=ylim, xlim=c(0,8), col=cols[2], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
+        axis(1, at=1:8, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
         if(print_letter==TRUE) print.letter(label="m", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="repinc") + index_add
-        plot(x=1:7, y=c(b_re[1,4], msy_re[1,4], emsy_re[1,4], K_re[1,4], r_re[1,4], bbmsy_re[1,4], eemsy_re[1,4]), ylim=ylim, xlim=c(0,8), col=cols[3], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        plot(x=1:8, y=c(b_re[1,4], msy_re[1,4], e_re[1,4], emsy_re[1,4], K_re[1,4], r_re[1,4], bbmsy_re[1,4], eemsy_re[1,4]), ylim=ylim, xlim=c(0,8), col=cols[3], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
+        axis(1, at=1:8, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
         if(print_letter==TRUE) print.letter(label="n", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
 
       #   plot(x=1, y=1, ylim=ylim, type="n", xlim=c(0,8),
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="repdec") + index_add
-        plot(x=1:7,  y=c(b_re[1,5], msy_re[1,5], emsy_re[1,5], K_re[1,5], r_re[1,5], bbmsy_re[1,5], eemsy_re[1,5]), ylim=ylim, xlim=c(0,8), col=cols[4], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+        plot(x=1:8,  y=c(b_re[1,5], msy_re[1,5], e_re[1,5], emsy_re[1,5], K_re[1,5], r_re[1,5], bbmsy_re[1,5], eemsy_re[1,5]), ylim=ylim, xlim=c(0,8), col=cols[4], pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
-        axis(1, at=1:7, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
+        axis(1, at=1:8, labels=c(expression(italic("B")), expression(italic("MSY")), expression(italic("u")), expression(italic(u[{MSY}])), expression(italic("K")), expression(italic("r")), expression(italic(B/B[{MSY}])), expression(italic(u/u[{MSY}]))), las=2, cex.axis=2)  
         if(print_letter==TRUE) print.letter(label="o", xy=c(0.05,0.95), cex=2,  font=2, col="black", xpd=NA)
         mtext("Parameter",  side=1, line=9, cex=1.6, outer=TRUE)
     }

@@ -125,8 +125,8 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
             lines(x=35:(35+nproject), y=c(c_true[1,index[i],35], c_proj_t[index[i],]), col=gray(0.2), lwd=2)
             if(print_letters==TRUE) print.letter(label=paste0("(", letters[i],")"), xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
             if(i==3){
-                text(x=41, y=140, "Estimated", col=plotcol, font=2, cex=2)
-                text(x=39, y=39, "True", col=gray(0.2), font=2, cex=2)
+                text(x=29, y=125, "Estimated", col=plotcol, font=2, cex=2)
+                text(x=29, y=30, "True", col=gray(0.2), font=2, cex=2)
             }
         } 
     }

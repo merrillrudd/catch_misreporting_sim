@@ -60,13 +60,18 @@ term_2way_startalt <- readRDS(file.path(res_dir, "2way-results-terminal-startalt
 setwd(init_dir)
 source("r_functions\\functions.R")
 
-# png(file.path(res_figs, "Paper_Fig_Terminal_stochastic_Alt.png"), width=1300, height=800)
+png(file.path(res_figs, "Paper_Fig_Terminal_stochastic_Alt.png"), width=1300, height=800)
 Paper_Fig_Terminal(results=term_2way_startalt, deterministic=FALSE, relerr=2)
-# dev.off()
+dev.off()
 
 pdf(file.path(res_figs, "Rudd_and_Branch_Figure2.pdf"), width=18, height=14)
 Paper_Fig_Terminal(results=term_2way_startalt, deterministic=FALSE, relerr=2)
 dev.off()
+
+pdf(file.path(res_figs, "Rudd_and_Branch_Figure2_bw.pdf"), width=18, height=14)
+Paper_Fig_Terminal(results=term_2way_startalt, deterministic=FALSE, relerr=2, bw=TRUE)
+dev.off()
+
 
 png(file.path(res_figs, "Paper_Fig_Project_deterministic_Alt.png"), width=1200, height=800)
 Paper_Fig_Project(results=term_2way_startalt, run_project=TRUE, start_sim="Alt", nproject=5, constantTAC=FALSE)
@@ -76,3 +81,6 @@ pdf(file.path(res_figs, "Rudd_and_Branch_Figure3.pdf"), width=18, height=14)
 Paper_Fig_Project(results=term_2way_startalt, run_project=TRUE, start_sim="Alt", nproject=5, constantTAC=FALSE)
 dev.off()
 
+pdf(file.path(res_figs, "Rudd_and_Branch_Figure3_bw.pdf"), width=18, height=14)
+Paper_Fig_Project(results=term_2way_startalt, run_project=TRUE, start_sim="Alt", nproject=5, constantTAC=FALSE, bw=TRUE)
+dev.off()

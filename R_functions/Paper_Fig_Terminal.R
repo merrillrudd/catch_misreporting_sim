@@ -2,7 +2,7 @@
 ## relerr==2, estimated/true
 
 Paper_Fig_Terminal <- function(results, deterministic=FALSE, relerr=1, show_catch=TRUE, print_letter=TRUE, 
-    show_params=TRUE, pres=FALSE){
+    show_params=TRUE, pres=FALSE, bw=FALSE){
 
     require(beanplot)
 
@@ -101,7 +101,14 @@ if(show_params==FALSE){
         if(pres==TRUE) par(omi=c(1.5, 1.5, 1, 1), mar=c(0,0,0,0), mgp=c(3.1, 1.2, 0))
         layout(lmat)
         # layout.show(n=10)
-        cols <- brewer.pal(4, "Set1")
+        if(bw==FALSE){
+            cols <- brewer.pal(4, "Set1")
+            lty_true <- 1
+        }
+        if(bw==TRUE){
+            cols <- rep(gray(0.2), 4)
+            lty_true <- 2
+        }
 
     ## reporting rates over time
         xplot <- 1:datyrs
@@ -116,7 +123,7 @@ if(show_params==FALSE){
         if(print_letter==TRUE) print.letter(label="(a)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
-        abline(h=1, col=gray(0.6), lwd=2)
+        abline(h=1, col=gray(0.6), lty=lty_true, lwd=2)
         if(show_catch==FALSE) axis(1, at=seq(10,30, by=10), cex.axis=2)
         lines(x=xplot, y=rep(0.5, datyrs), col=cols[1], lwd=4)
         if(pres==FALSE) mtext("Constant Under-reporting",  side=3, line=1.5, cex=1.6)
@@ -124,7 +131,7 @@ if(show_params==FALSE){
         if(print_letter==TRUE) print.letter(label="(b)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
 		plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
-        abline(h=1, col=gray(0.6), lwd=2)
+        abline(h=1, col=gray(0.6), lty=lty_true, lwd=2)
         if(show_catch==FALSE)    axis(1, at=seq(10,30, by=10), cex.axis=2)
         lines(x=xplot, y=rep(1.5, datyrs), col=cols[2], lwd=4)
         if(pres==FALSE) mtext("Constant Over-reporting",  side=3, line=1.5, cex=1.6)
@@ -134,7 +141,7 @@ if(show_params==FALSE){
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
         up <- (0.9-0.4)/(datyrs-1)*xplot + 0.4
-        abline(h=1, col=gray(0.6), lwd=2)
+        abline(h=1, col=gray(0.6), lty=lty_true, lwd=2)
         if(show_catch==FALSE)     axis(1, at=seq(10,30, by=10), cex.axis=2)
         lines(x=xplot, y=up, col=cols[3], lwd=4)
         if(pres==FALSE) mtext("Increasing Reporting",  side=3, line=1.5, cex=1.6)
@@ -142,7 +149,7 @@ if(show_params==FALSE){
         if(print_letter==TRUE) print.letter(label="(d)", xy=c(0.05,0.90), cex=2,  font=2, col="black", xpd=NA)
         plot(x=1, y=1, type="n", ylim=c(0,1.9), xlim=c(1,35), ann=F, 
         	xaxt="n",  yaxt="n", xaxs="i", yaxs="i")
-        abline(h=1, col=gray(0.6), lwd=2)
+        abline(h=1, col=gray(0.6), lty=lty_true, lwd=2)
         if(show_catch==FALSE)     axis(1, at=seq(10,30, by=10), cex.axis=2)
         down <- (0.4-0.9)/(datyrs-1)*xplot + 0.9
         lines(x=xplot, y=down, col=cols[4], lwd=4)
@@ -162,23 +169,23 @@ if(show_catch==TRUE){
     mtext("Catch",  side=2, line=4, cex=1.6)
     if(print_letter==TRUE) print.letter(label="(f)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, ylim=c(0, max(catch1)*1.6), 
-      xaxs="i", yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
+      xaxs="i", yaxs="i", xaxt="n", yaxt="n", col=gray(0.6), lty=lty_true) 
     lines(x=xplot, y=catch1*0.5, lwd=4, col=cols[1])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     if(print_letter==TRUE) print.letter(label="(g)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
-      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
+      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6), lty=lty_true) 
     lines(x=xplot, y=catch1*1.5, lwd=4, col=cols[2])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     mtext("Year",  side=1, line=3, cex=1.6)
     if(print_letter==TRUE) print.letter(label="(h)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
-      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
+      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6), lty=lty_true) 
     lines(x=xplot, y=catch1*up, lwd=4, col=cols[3])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     if(print_letter==TRUE) print.letter(label="(i)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
     plot(x=xplot, y=catch1, type="l", lwd=2, xaxs="i", ylim=c(0, max(catch1)*1.6), 
-      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6))
+      yaxs="i", xaxt="n", yaxt="n", col=gray(0.6), lty=lty_true) 
     lines(x=xplot, y=catch1*down, lwd=4, col=cols[4])
     axis(1, at=seq(10,30, by=10), cex.axis=2)
     if(print_letter==TRUE) print.letter(label="(j)", xy=c(0.05,0.92), cex=2,  font=2, col="black", xpd=NA)
@@ -387,7 +394,7 @@ if(show_params==TRUE){
                # xaxt="n", yaxt="n", xaxs="i", yaxs="i")
         #index <- which(rmodel_vec=="allrep") + index_add
         plot(x=1:7, y=c(median(b_re[,index[1]]), median(e_re[,index[1]]), median(bbmsy_re[,index[1]]), median(eemsy_re[,index[1]]), 
-            median(msy_re[,index[1]]), median(K_re[,index[1]]), median(r_re[,index[1]])), ylim=ylim, xlim=c(0,8), col=gray(0.6), pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
+            median(msy_re[,index[1]]), median(K_re[,index[1]]), median(r_re[,index[1]])), ylim=ylim, xlim=c(0,8), col=gray(0.6), lty=lty_true, pch=19, cex=3, xaxt="n", yaxt="n", xlab="", ylab="", xaxs="i", yaxs="i")
         if(relerr==1) abline(h=0, lwd=1, lty=2)
         if(relerr==2) abline(h=1, lwd=1, lty=2)
         axis(2, at=pretty(ylim), las=2, cex.axis=2)

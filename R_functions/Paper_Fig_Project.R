@@ -1,5 +1,5 @@
 Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10, pres=FALSE, 
-    print_letters=TRUE, constantTAC=FALSE, msy=FALSE){
+    print_letters=TRUE, constantTAC=FALSE, msy=FALSE, bw=FALSE){
 
 
 	if(run_project==TRUE){
@@ -101,7 +101,14 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
     }
 
     index <- seq(1,14, by=2)[-c(4,5)]
-    cols <- brewer.pal(4, "Set1")
+    if(bw==FALSE){
+        cols <- brewer.pal(4, "Set1")
+        lty_true <- 1
+    }
+    if(bw==TRUE){
+        cols <- rep(gray(0.6), 4)
+        lty_true <- 2
+    }
     if(pres==FALSE){
     	par(mfrow=c(4,5), mar=c(0,0,0,0), omi=c(1,1,1,0.2))
         for(i in 1:length(index)){

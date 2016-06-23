@@ -9,6 +9,7 @@ source("R_functions\\plotTruth.R")
 source("R_functions\\plotMRE.R")
 source("R_functions\\Paper_Fig_Terminal.R")
 source("R_functions\\Paper_Fig_Project.R")
+source("R_functions\\Paper_Fig_Simulation.R")
 source("R_functions\\print.letter.R")
 
 source("R_functions\\readResults.R")

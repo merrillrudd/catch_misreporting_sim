@@ -106,7 +106,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
         lty_true <- 1
     }
     if(bw==TRUE){
-        cols <- rep(gray(0.6), 4)
+        cols <- rep(gray(0.2), 4)
         lty_true <- 2
     }
     if(pres==FALSE){
@@ -125,7 +125,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
                 axis(2, at=pretty(c(min(catch1), max(catch1)*1.6))[-length(pretty(c(min(catch1), max(catch1)*1.6)))], las=2,cex.axis=axis_lab)
                mtext("Catch",  side=2, line=lab_line, cex=1.6)
             }
-            plotcol <- ifelse(i==1, gray(0.6), cols[i-1])
+            plotcol <- ifelse(i==1, gray(0.2), cols[i-1])
             lines(x=1:35, y=c_rep[1,index[i],], lwd=5, col=plotcol)
             lines(x=35:(35+nproject), y=c(c_rep[1,index[i],35], TAC[index[i],]), lwd=5, col=plotcol)
             lines(x=1:35, y=c_true[1,index[i],], lwd=2, col=gray(0.2))
@@ -151,7 +151,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
     			axis(2, at=pretty(c(0,1500)), las=2, cex.axis=axis_lab)
                 mtext("Biomass",  side=2, line=lab_line, cex=1.6)
     		}
-            plotcol <- ifelse(i==1, gray(0.6), cols[i-1])
+            plotcol <- ifelse(i==1, gray(0.2), cols[i-1])
             lines(x=1:35, y=b_est[1,index[i],], lwd=5, col=plotcol)
             lines(x=35:(35+nproject), y=c(b_est[1,index[i],35], b_proj[index[i],]), lwd=5, col=plotcol) 
     		lines(x=1:35, y=b_true[1,index[i],], lwd=2, col=gray(0.2))
@@ -172,7 +172,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
     			axis(2, at=pretty(c(0,3))[-length(pretty(c(0,3)))], las=2, cex.axis=axis_lab)
     			mtext(expression(italic(B/B[{MSY}])),  side=2, line=lab_line, cex=1.6)
     		}
-            plotcol <- ifelse(i==1, gray(0.6), cols[i-1])    		
+            plotcol <- ifelse(i==1, gray(0.2), cols[i-1])    		
             lines(x=1:35, y=b_est[1,index[i],]/bmsy_est[1,index[i]], lwd=5, col=plotcol)
             lines(x=35:(35+nproject), y=c(b_est[1,index[i],35]/bmsy_est[1,index[i]], b_proj[index[i],]/bmsy_est[1,index[i]]), lwd=5, col=plotcol)   
             lines(x=1:35, y=b_true[1,index[i],]/bmsy_true, lwd=2, col=gray(0.2))
@@ -193,7 +193,7 @@ Paper_Fig_Project <- function(results, run_project=FALSE, start_sim, nproject=10
                 axis(2, at=pretty(c(0,7))[-length(pretty(c(0,7)))], las=2, cex.axis=axis_lab)
     			mtext(expression(italic(u/u[{MSY}])),  side=2, line=lab_line, cex=1.6)
     		}
-            plotcol <- ifelse(i==1, gray(0.6), cols[i-1])
+            plotcol <- ifelse(i==1, gray(0.2), cols[i-1])
         	lines(x=1:35, y=((c_rep[1,index[i],]/b_est[1,index[i],])/(msy_est[1,index[i]]/bmsy_est[1,index[i]])), lwd=5, col=plotcol)
             # lines(x=35:(35+nproject), y=c((c_rep[1,index[i],35]/b_est[1,index[i],35])/(msy_est[1,index[i]]/bmsy_est[1,index[i]]), (c_proj[index[i],]/b_proj[index[i],])/(msy_est[1,index[i]]/bmsy_est[1,index[i]])), lwd=5, col=plotcol)
             lines(x=35:(35+nproject), y=c((c_rep[1,index[i],35]/b_est[1,index[i],35])/(msy_est[1,index[i]]/bmsy_est[1,index[i]]), (TAC[index[i],]/b_proj[index[i],])/(msy_est[1,index[i]]/bmsy_est[1,index[i]])), lwd=5, col=plotcol)
